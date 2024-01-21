@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/popup/bulma.min.css">
+    <style>
+        body {
+            width: 1500px;
+            margin: 120px auto 0 auto;
+        }
+        #bookmarkTableContainer {
+            width: 100%;
+            max-width: 1500px;
+            overflow-x: auto;
+            overflow-y: auto;
+            margin-top: 80px;
+            margin-bottom: 10px;
+        }
+        #addBookmark{
+            margin: -10px 0 0 0;
+        }
+        .fixed-top-left {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1000;
+        }
+      </style>
+    <title>Bookmark Crawler</title>
+    <script src="popup.js"></script>    
+</head>
+<div id="title" class="fixed-top-left">
+    <h1 class="title is-3">Intern Bookmarks at your service!</h1>
+    <p class="subtitle is-5">Press the button to add a 104/cakeresume/skyline page to Bookmarks.</p>
+    <button class="button is-link is-rounded " id="addBookmark">Add to Bookmarks</button>
+</div>
+<body>
+    <section class="section" id="bookmarkTableContainer">
+        <div class="container">
+            <div style="height: 200px;">
+                <table id="bookmarkTable" class="table is-fullwidth is-bordered">
+                    <thead>
+                        <tr>
+                            <th>實習名稱</th>
+                            <th>公司名稱</th>
+                            <th>薪水</th>
+                            <th>地點</th>
+                            <th>更多資訊</th>
+                            <th>原始連結</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablebody">
+                        <!-- 表格內容將動態添加到這裡 -->
+                    </tbody>
+                </table>
+            </div>           
+        </div>        
+    </section>
+    </body>
+</html>
+
